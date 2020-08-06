@@ -326,6 +326,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   feedbackText: {fileID: 823017366}
   controlPanel: {fileID: 1322544147}
+  maxPlayersPerRoom: 15
+  minPlayersPerRoom: 1
   loaderAnime: {fileID: 1002997591}
 --- !u!1 &433081654
 GameObject:
@@ -940,7 +942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.51000977, y: 0.0024414062}
+  m_AnchoredPosition: {x: -0.51171875, y: 0.001953125}
   m_SizeDelta: {x: 1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1080284715
@@ -1257,8 +1259,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.07846, y: 2.07846, z: 2.07846}
   m_Children:
-  - {fileID: 1492304934}
   - {fileID: 2002305580}
+  - {fileID: 1492304934}
   m_Father: {fileID: 1238274999}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1566,7 +1568,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1327997375}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2270,7 +2272,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1327997375}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

@@ -6,7 +6,7 @@ using Photon.Pun;
 
 #pragma warning disable 649
 
-public class PlayerUI_Name : MonoBehaviour
+public class PlayerUI_Name : Photon.Pun.MonoBehaviourPun
 {
     
     [SerializeField] private Vector3 screenOffset = new Vector3(0f, 30f, 0f);
@@ -26,16 +26,11 @@ public class PlayerUI_Name : MonoBehaviour
 
     Vector3 targetPosition;
 
-    void Awake()
-    {
-        _canvasGroup = this.GetComponent<Canvas>();
-        Debug.Log(PhotonNetwork.NickName);
-    }
-
 
     // Update is called once per frame
     void Update()
     {
+
         if (target == null)
         {
             Destroy(this.gameObject);
@@ -49,7 +44,7 @@ public class PlayerUI_Name : MonoBehaviour
 
         if (_target == null)
         {
-            Debug.LogError("<Color=Red><b>Missing</b></Color> PlayMakerManager target for PlayerUI.SetTarget.", this);
+          
             return;
         }
 

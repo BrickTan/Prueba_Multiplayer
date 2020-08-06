@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviourPunCallbacks
 
     public void Awake()
     {
+        
         if (photonView.IsMine)
         {
             LocalPlayerInstance = gameObject;
@@ -29,6 +30,12 @@ public class PlayerController : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+
+        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+        {
+            return;
+        }
+
         if (this.playerUiPrefab != null)
         {
             GameObject _uiGo = Instantiate(this.playerUiPrefab);
@@ -40,13 +47,5 @@ public class PlayerController : MonoBehaviourPunCallbacks
         }
 
     }
-
-    void CalledOnLevelWasLoaded(int level)
-    {
-       
-        GameObject _uiGo = Instantiate(this.playerUiPrefab);
-        _uiGo.SendMessage("SetTarget", this, SendMessageOptions.RequireReceiver);
-    }
-
 
 }
